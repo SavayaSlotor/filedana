@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Download Page</title>
+  <link rel="stylesheet" href="index.css" />
+  <script>
+    function setActive(tabId) {
+      document.querySelectorAll(".nav-item").forEach(item => item.classList.remove("active"));
+      document.getElementById(tabId).classList.add("active");
+
+      document.querySelectorAll(".slide-page").forEach(page => page.style.display = "none");
+      document.getElementById("page-" + tabId).style.display = "flex";
+    }
+
+    window.onload = () => {
+      setActive('dana');
+    };
+  </script>
+</head>
+<body>
+
+  <div class="slide-container">
+    <!-- DANA -->
+    <div class="slide-page" id="page-dana">
+      <img class="main-logo" src="https://files.sitestatic.net/ImageFile/202502241701390000002bcf69740bLUGUGAG__680x137.gif" alt="Header Logo">
+      <h2>DANA</h2>
+      <img class="brand-logo" src="dana.png" alt="DANA Logo">
+      <a href="https://store8.gofile.io/download/web/09c76738-61c9-4f6a-b6d2-e49d0455eb45/DANAid.danav2.82.1.apk" class="download-btn" download>Download Now</a>
+    </div>
+
+    <!-- Surfshark -->
+    <div class="slide-page" id="page-surfshark">
+      <img class="main-logo" src="https://files.sitestatic.net/ImageFile/202502241701390000002bcf69740bLUGUGAG__680x137.gif" alt="Header Logo">
+      <h2>Surfshark</h2>
+      <img class="brand-logo" src="Surfshark.png" alt="Surfshark Logo">
+      <a href="https://store3.gofile.io/download/web/509ee40d-b08b-4c9b-84e5-ad0d29a305a2/Surfsharkcom.surfshark.vpnclient.androidv3.16.2.apk" class="download-btn" download>Download Now</a>
+    </div>
+
+    <!-- Mymutasi -->
+    <div class="slide-page" id="page-mutasi">
+      <img class="main-logo" src="https://files.sitestatic.net/ImageFile/202502241701390000002bcf69740bLUGUGAG__680x137.gif" alt="Header Logo">
+      <h2>Mymutasi</h2>
+      <img class="brand-logo" src="mymutasi.png" alt="Mymutasi Logo">
+      <a href="https://store9.gofile.io/download/web/7b3f44dc-e1d3-42e9-ab12-eef31c046656/My_Mutasicom.devandro.capturetcpv1.2.0.apk" class="download-btn" download>Download Now</a>
+    </div>
+  </div>
+
+  <!-- Bottom Nav -->
+  <div class="bottom-nav">
+    <div class="nav-item active" id="dana" onclick="setActive('dana')">
+      <div class="icon-circle">
+        <img src="dana.png" alt="Dana" class="icon-img" />
+      </div>
+      <span class="label">DANA</span>
+    </div>
+    <div class="nav-item" id="surfshark" onclick="setActive('surfshark')">
+      <div class="icon-circle">
+        <img src="Surfshark.png" alt="Surfshark" class="icon-img" />
+      </div>
+      <span class="label">SURFSHARK</span>
+    </div>
+    <div class="nav-item" id="mutasi" onclick="setActive('mutasi')">
+      <div class="icon-circle">
+        <img src="mymutasi.png" alt="My Mutasi" class="icon-img" />
+      </div>
+      <span class="label">MY MUTASI</span>
+    </div>
+  </div>
+
+</body>
+</html>

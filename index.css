@@ -1,0 +1,123 @@
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: #fff;
+    padding-bottom: 120px;
+  }
+
+  .slide-container {
+    padding: 40px 20px 100px;
+  }
+
+  .slide-page {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 0.4s ease;
+  }
+
+  .main-logo {
+    width: 80%;
+    max-width: 280px;
+    margin-bottom: 20px;
+  }
+
+  .brand-logo {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    margin: 20px 0 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .download-btn {
+    display: inline-block;
+    background: #5c6ac4;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .download-btn:hover {
+    background: #4b59b5;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .bottom-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 90%;
+    max-width: 360px;
+    z-index: 999;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: scale(1);
+  }
+
+  .nav-item.active {
+    color: #5c6ac4;
+    transform: scale(1.08);
+  }
+
+  .icon-circle {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(100, 100, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+    transition: background 0.3s ease;
+    overflow: hidden;
+  }
+
+  .nav-item.active .icon-circle {
+    background: #5c6ac4;
+  }
+
+  .icon-img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+  }
+
+  .label {
+    font-size: 11px;
+  }
+}
