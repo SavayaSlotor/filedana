@@ -93,7 +93,7 @@
     box-shadow: 0 -4px 30px rgba(255, 215, 0, 0.2);
     backdrop-filter: blur(12px);
     border-top: 1px solid rgba(255, 215, 0, 0.2);
-    border-radius: 20px 20px 0 0; /* ✅ round top only */
+    border-radius: 35px 35px 0 0;
     z-index: 9999;
   }
 
